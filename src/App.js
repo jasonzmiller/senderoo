@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter , Route } from 'react-router-dom';
+import { combineReducers , createStore } from 'redux';
+import { Provider } from 'react-redux';
 import './App.css';
+import areaReducer from './reducers/area-reducer';
+import AreaList from './components/area-list.js';
+
+const reducer = combineReducers({
+  areaReducer
+})
+
+const store = createStore(reducer)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Provider store={store}>
+        <div className="container-fluid">
+          <Route path="/" exact={true} component={AreaList}/>
+        </div>
+      </Provider>
+    </BrowserRouter>
   );
 }
 
