@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Provider store={store}>
         <div className="container-fluid">
-          <Route path="/" exact={true} component={AreaList}/>
+          {/*<Route path="/" exact={true} component={AreaList}/>*/}
           <Route path="/" exact={true} component={WeatherDisplay}/>
         </div>
       </Provider>

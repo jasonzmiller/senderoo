@@ -10,7 +10,7 @@ const WeatherDisplay = (
 ) => {
 
     useEffect(() => {
-        findWeatherForCity("denver")
+        findWeatherForCity()
     }, [])
 
     return(
