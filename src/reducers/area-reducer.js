@@ -9,6 +9,9 @@ const areaReducer = ( state = initialState , action ) => {
                 ...state,
                 areas: action.areas
             }
+
+        default:
+            return state
     }
 }
 
