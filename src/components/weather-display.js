@@ -5,20 +5,27 @@ import weatherService from '../services/weather-service.js';
 const WeatherDisplay = (
     {
         weatherForCity,
-        findWeatherForCity
+        findWeatherForCity,
+        item=""
     }
 ) => {
+
     const [detailed, setDetailed] = useState(false)
+
+    const [searchItem, setSearchItem] = useState(item);
+
+    const [cityList, setCityList] = useState([weatherForCity]);
+
     useEffect(() => {
         findWeatherForCity()
     }, [])
 
     return(
         <>
-        <input 
-        type="text" 
-        placeholder="Search"
-        ></input>
+        <input type="text" placeholder="Search" onChange={(e) => setSearchItem(e.target.value)}></input>
+        <i className="fas fa-check fa-2x" onClick={() => {
+            findWeatherForCity(searchItem)
+            setCityList((cityList) => [...cityList, weatherForCity])}}></i>
         {
             !detailed && 
             <>
@@ -77,6 +84,7 @@ const stpm = ( state ) => ({
 const dtpm = ( dispatch ) => ({
     findWeatherForCity: (city) => {
         weatherService.findWeatherForCity(city)
+        .then(weatherForCity => console.log(weatherForCity))
         .then(weatherForCity => dispatch({
             type: "FIND_WEATHER_FOR_CITY",
             weatherForCity
