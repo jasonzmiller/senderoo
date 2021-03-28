@@ -4,7 +4,7 @@ export const findAllAreas = () =>
     fetch("https://skimap.org/SkiAreas/index.json", {
         mode: 'no-cors'
     })
-        .then(response => console.log(response))
+        .then(response => response.json())
 
 const api = {
     findAllAreas

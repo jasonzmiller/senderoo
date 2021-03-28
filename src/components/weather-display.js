@@ -1,30 +1,37 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
+import weatherService from '../services/weather-service.js';
 
 const WeatherDisplay = (
     {
-        weatherForCity
+        weatherForCity,
+        findWeatherForCity
     }
 ) => {
+
+    useEffect(() => {
+        findWeatherForCity("denver")
+    }, [])
+
     return(
         <>
-        <h1>{weatherForCity.weather.main}</h1>
+        <p>{JSON.stringify(weatherForCity)}</p>
         </>
     )
 }
 
-const stpm = ( state ) = ({
+const stpm = ( state ) => ({
     weatherForCity: state.weatherReducer.weatherForCity
 })
 
-const dtpm = ( dispatc ) = ({
+const dtpm = ( dispatch ) => ({
     findWeatherForCity: (city) => {
         weatherService.findWeatherForCity(city)
-            .then(weatherForCity => dispatchEvent({
-                type: "FIND_WEATHER_FOR_CITY",
-                weatherForCity
-            }))
+        .then(weatherForCity => dispatch({
+            type: "FIND_WEATHER_FOR_CITY",
+            weatherForCity
+        }))
     }
 })
 
-export default connect ( stpm, dtpm ) ( WeatherDisplay );
+export default connect ( stpm , dtpm ) ( WeatherDisplay )
