@@ -17,7 +17,7 @@ const WeatherDisplay = (
     const [cityList, setCityList] = useState([weatherForCity]);
 
     useEffect(() => {
-        findWeatherForCity()
+        findWeatherForCity("denver")
     }, [])
 
     return(
@@ -33,7 +33,7 @@ const WeatherDisplay = (
                         <div className="card">
                             <div className="card-body"> 
                                 <h5 className="card-title">
-                                    {weatherForCity.name}
+                                    {/* {weatherForCity.name} */}
                                 </h5>
                                 <i onClick={() => {
                                     setDetailed(true)
@@ -54,7 +54,7 @@ const WeatherDisplay = (
                     <div className="card">
                         <div className="card-body"> 
                             <h5 className="card-title">
-                                {weatherForCity.name}
+                                {/* {weatherForCity.name} */}
                             </h5>
                             <i onClick={() => {
                                 setDetailed(false)
