@@ -18,7 +18,11 @@ function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <div className="container-fluid">
+        <div className="container-fluid" style={{
+          backgroundColor: '#7CB9E8',
+          height: '100vh'
+          
+        }}>
           {/*<Route path="/" exact={true} component={AreaList}/>*/}
           <Route path="/" exact={true} component={WeatherDisplay}/>
         </div>

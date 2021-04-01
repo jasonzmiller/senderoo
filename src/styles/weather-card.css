@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.title-container{
+    display: flex;
+    justify-content: center;
+}
+.card-title{
+    text-transform: uppercase;  
+    font-size: x-large;
+    letter-spacing: 2px;
+    font-family: 'Montserrat';
+}
+.card{
+    background-color: #7d7e7b;
+    margin: 0.5rem;
+    box-shadow: 2px 5px;   
+}
+.list-group{
+    margin: 0.5rem;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+}
+.list-group-item{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+

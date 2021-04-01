@@ -21,10 +21,14 @@ const WeatherDisplay = (
 
     return(
         <>
-        <input type="text" placeholder="Search" onChange={(e) => setSearchItem(e.target.value)}></input>
-        <i className="fas fa-check fa-2x" onClick={() => {
-            setCityList((cityList) => [...cityList, weatherForCity])}}></i>
-        <div>
+        <div className="input-group rounded">
+            <input className="form-control rounded" type="text" placeholder="Add Location" onChange={(e) => setSearchItem(e.target.value)}/>
+            <span className="input-group-text border-0" id="search-addon">
+                <i className="fas fa-check fa-2x" onClick={() => {
+                    setCityList((cityList) => [...cityList, weatherForCity])}}></i>
+            </span>
+        </div>
+        <div className="row">
         {
             cityList.map(city => <WeatherCard city={city}/>)
         }
