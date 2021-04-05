@@ -30,4 +30,9 @@
     font-weight: bold;
     background-color: aliceblue;
 }
-
+i:hover{
+    cursor: pointer;
+}
+#search-addon:hover{
+    color: rgb(0, 0, 0);
+}
