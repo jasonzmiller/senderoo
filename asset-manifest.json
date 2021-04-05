@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/senderoo/static/css/main.e14fbe09.chunk.css",
+    "main.js": "/senderoo/static/js/main.56352b1a.chunk.js",
+    "main.js.map": "/senderoo/static/js/main.56352b1a.chunk.js.map",
+    "runtime-main.js": "/senderoo/static/js/runtime-main.128a10d5.js",
+    "runtime-main.js.map": "/senderoo/static/js/runtime-main.128a10d5.js.map",
+    "static/css/2.5569c947.chunk.css": "/senderoo/static/css/2.5569c947.chunk.css",
+    "static/js/2.8f1fe159.chunk.js": "/senderoo/static/js/2.8f1fe159.chunk.js",
+    "static/js/2.8f1fe159.chunk.js.map": "/senderoo/static/js/2.8f1fe159.chunk.js.map",
+    "static/js/3.272d3c33.chunk.js": "/senderoo/static/js/3.272d3c33.chunk.js",
+    "static/js/3.272d3c33.chunk.js.map": "/senderoo/static/js/3.272d3c33.chunk.js.map",
+    "index.html": "/senderoo/index.html",
+    "static/css/2.5569c947.chunk.css.map": "/senderoo/static/css/2.5569c947.chunk.css.map",
+    "static/css/main.e14fbe09.chunk.css.map": "/senderoo/static/css/main.e14fbe09.chunk.css.map",
+    "static/js/2.8f1fe159.chunk.js.LICENSE.txt": "/senderoo/static/js/2.8f1fe159.chunk.js.LICENSE.txt",
+    "static/media/all.min.css": "/senderoo/static/media/fa-solid-900.efbd5d20.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.128a10d5.js",
+    "static/css/2.5569c947.chunk.css",
+    "static/js/2.8f1fe159.chunk.js",
+    "static/css/main.e14fbe09.chunk.css",
+    "static/js/main.56352b1a.chunk.js"
+  ]
+}
