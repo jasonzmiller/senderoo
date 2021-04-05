@@ -24,7 +24,7 @@ function App() {
           
         }}>
           {/*<Route path="/" exact={true} component={AreaList}/>*/}
-          <Route path="/" exact={true} component={WeatherDisplay}/>
+          <Route path="/display" exact={true} component={WeatherDisplay}/>
         </div>
       </Provider>
     </BrowserRouter>
