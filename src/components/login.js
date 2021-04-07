@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/login.css'
 
 const Login = () => {
 
@@ -8,29 +9,20 @@ const Login = () => {
     return(
         <>
         <div className="container">
-            <div className="registration">
-                <h1>Registration</h1>
-                <label>Username</label>
-                <input 
-                    type="text"
-                    onChange={(e) => {
-                        setUsernameReg(e.target.value);
-                    }}
-                />
-                <label>Password</label>
-                <input 
-                    type="text"
-                    onChange={(e) => {
-                        setPasswordReg(e.target.value);
-                    }}
-                    />
-                <button> Register </button>
-            </div>
             <div className="login">
                 <h1>Login</h1>
-                <input type="text" placeholder="Username..."/>
-                <input type="password" placeholder="Password..."/>
-                <button> Register </button>
+                <input 
+                    type="text" 
+                    placeholder="Username..."
+                />
+                <input 
+                    type="password" 
+                    placeholder="Password..."
+                />
+                <input
+                    type="submit"
+                    value="submit"
+                />
             </div>
         </div>
         </>
