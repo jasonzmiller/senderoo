@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import weatherService from '../services/weather-service.js';
 import WeatherCard from './weather-card.js';
+import WeatherSearchResult from './weather-search-result.js';
 
 const WeatherDisplay = (
     {
@@ -15,6 +16,8 @@ const WeatherDisplay = (
 
     const [cityList, setCityList] = useState([weatherForCity]);
 
+    const [didSearch, setDidSearch] = useState(false);
+
     useEffect(() => {
         findWeatherForCity(searchItem)
     }, [searchItem])
@@ -22,10 +25,17 @@ const WeatherDisplay = (
     return(
         <>
         <div className="input-group rounded">
-            <input className="form-control rounded" type="text" placeholder="Add Location" onChange={(e) => setSearchItem(e.target.value)}/>
-            <span className="input-group-text border-0" id="search-addon">
+            <input className="form-control rounded" 
+                   type="text" 
+                   placeholder="Add Location" 
+                   onChange={(e) => setSearchItem(e.target.value)}/>
+            {/* <span className="input-group-text border-0" id="search-addon">
                 <i className="fas fa-check fa-2x" onClick={() => {
-                    setCityList((cityList) => [...cityList, weatherForCity])}}></i>
+                    setCityList((cityList) => [weatherForCity, ...cityList])}}></i>
+            </span> */}
+            <span className="input-group-text border-0">
+                <i className="fas fa-search fa-2x" onClick={() => {
+                    setDidSearch(true)}}></i>
             </span>
         </div>
         <div className="row">
@@ -33,6 +43,16 @@ const WeatherDisplay = (
             cityList.map(city => <WeatherCard city={city}/>)
         }
         </div>
+        <>
+        {
+            didSearch &&
+            <WeatherSearchResult result={weatherForCity} 
+                                setDidSearch={setDidSearch} 
+                                setCityList={setCityList} 
+                                weatherForCity={weatherForCity} 
+                                cityList={cityList}/>
+        }
+        </>
         </>
     )
 }

@@ -1,7 +1,7 @@
 {
   "name": "senderoo",
   "version": "0.1.0",
-  "homepage": "https://jasonzmiller.github.io/senderoo/",
+  "homepage": "https://jasonzmiller.github.io/senderoo",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
