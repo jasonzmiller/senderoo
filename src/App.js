@@ -6,6 +6,7 @@ import areaReducer from './reducers/area-reducer';
 import weatherReducer from './reducers/weather-reducer';
 import AreaList from './components/area-list.js';
 import WeatherDisplay from './components/weather-display.js';
+import Login from './components/login.js'
 
 const reducer = combineReducers({
   areaReducer,
@@ -24,7 +25,8 @@ function App() {
           
         }}>
           {/*<Route path="/" exact={true} component={AreaList}/>*/}
-          <Route path="/display" exact={true} component={WeatherDisplay}/>
+          <Route path="/weather" exact={true} component={WeatherDisplay}/>
+          <Route path="/login" exact={true} component={Login}/>
         </div>
       </Provider>
     </BrowserRouter>
